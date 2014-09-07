@@ -10,7 +10,7 @@
       functionCall;
 
   // define ajax call
-  var jqxhr = $.ajax({url: '/proxy.php?url=' + apiEndpoint});
+  var jqxhr = $.ajax({url: '../proxy.php?url=' + apiEndpoint});
 
   jqxhr.done(function(feed){
     var products = [];
