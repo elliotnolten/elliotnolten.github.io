@@ -3,14 +3,24 @@
   var apiURL = 'https://api.bol.com/catalog/v4/lists/',
       apiFormat = 'json',
       apiParams = [
-            'ids=4005',
-            'sort=priceasc'
+            'ids=87,8293',
+            'type=new',
+            'sort=priceasc',
+            'limit=50'
           ],
       apiEndpoint = apiURL + '?apikey=' + apiKey + '&format=' + apiFormat + '&' + apiParams.join('&'),
       functionCall;
 
   // define ajax call
-  var jqxhr = $.ajax({url: '../proxy.php?url=' + apiEndpoint});
+  var jqxhr = $.ajax({
+                url: 'proxy.php?url=https://api.bol.com/catalog/v4/lists/?apikey=' + apiKey,
+                data: {
+                  'ids':'87',
+                  'type':'new',
+                  'sort':'priceasc',
+                  'limit':'50'
+                }
+              });
 
   jqxhr.done(function(feed){
     var products = [];

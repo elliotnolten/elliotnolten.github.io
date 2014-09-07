@@ -164,19 +164,6 @@ if ( !$url ) {
     curl_setopt( $ch, CURLOPT_POSTFIELDS, $_POST );
   }
   
-  if ( $_GET['send_cookies'] ) {
-    $cookie = array();
-    foreach ( $_COOKIE as $key => $value ) {
-      $cookie[] = $key . '=' . $value;
-    }
-    if ( $_GET['send_session'] ) {
-      $cookie[] = SID;
-    }
-    $cookie = implode( '; ', $cookie );
-    
-    curl_setopt( $ch, CURLOPT_COOKIE, $cookie );
-  }
-  
   curl_setopt( $ch, CURLOPT_FOLLOWLOCATION, true );
   curl_setopt( $ch, CURLOPT_HEADER, true );
   curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
@@ -201,7 +188,7 @@ if ( $_GET['mode'] == 'native' ) {
   
   // Propagate headers to response.
   foreach ( $header_text as $header ) {
-    if ( preg_match( '/^(?:Content-Type|Content-Language|Set-Cookie):/i', $header ) ) {
+    if ( preg_match( '/^(?:Content-Type|Content-Language):/i', $header ) ) {
       header( $header );
     }
   }
