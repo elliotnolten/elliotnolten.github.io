@@ -16,7 +16,6 @@
         },
         titleShortner = function(str,max) {
           var string = str.replace(/(^\s+|\s+$)/g,'');
-          console.log(string.length);
           if (string.length > max) {
               console.log(string);
               string = string.substring(0, max).replace(/\w+$/, '');
@@ -33,7 +32,7 @@
       dataType: 'json'
     });
 
-    jqxhr.done(function(feed){
+    jqxhr.success(function(feed){
       var products = [];
       $.each(feed.contents.products,function(index,entry){
         var title = titleShortner(entry.title,50),
