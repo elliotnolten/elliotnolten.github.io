@@ -15,9 +15,13 @@
   jqxhr.done(function(feed){
     var products = [];
     $.each(feed.contents.products,function(index,entry){
-      console.log(entry.urls[0]['value']);
+      var title = entry.title,
+          url = entry.urls[0]['value'],
+          img = entry.media[0]['url'];
       products += '' +
-      '<li><a href="' + entry.urls[0]['value'] + '">' + entry.title + '</a></li>';
+      '<li>' +
+        '<a href="' + url + '" style="background-image:url(' + img + ');"><div><span>' + title + '</span></div></a>' +
+      '</li>';
     });
     $('ul').html(products);
   });
