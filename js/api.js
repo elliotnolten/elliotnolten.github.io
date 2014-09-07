@@ -11,16 +11,15 @@
       functionCall;
 
   // define ajax call
-  console.log('https://api.bol.com/catalog/v4/lists/?' + $.param(apiParams));
   var jqxhr = $.ajax({
-                url: 'proxy_simple.php',
-                data: {requrl:'https://api.bol.com/catalog/v4/lists/?' + $.param(apiParams)},
+                url: 'proxy.php',
+                data: {url:'https://api.bol.com/catalog/v4/lists/?' + $.param(apiParams)},
                 dataType: 'json'
               });
 
   jqxhr.done(function(feed){
     var products = [];
-    $.each(feed.products,function(index,entry){
+    $.each(feed.contents.products,function(index,entry){
       var title = entry.title,
           url = entry.urls[0]['value'],
           img = entry.media[0]['url'];
