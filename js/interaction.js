@@ -6,9 +6,18 @@
         var th = list.find('.th'),
             pops = th.find('.pop'),
             mask = $('.mask'),
-            winH = $(window).height(),
-            winW = $(window).width(),
-            calcPos = function(el){
+            win = $(window),
+            winH = win.height(),
+            winW = win.width();
+        win.resize(function(){
+          winH = win.height();
+          winW = win.width();
+        });
+        var calcPos = function(el){
+              el.css({
+                'height': winH*0.8,
+                'width': 'auto'
+              });
               var elW = el.width(),
                   elH = el.height();
               el.css({
@@ -26,6 +35,9 @@
               mask.addClass('active');
               calcPos(pop);
             }
+            win.resize(function(){
+              calcPos(pop);
+            });
           });
         });
 
