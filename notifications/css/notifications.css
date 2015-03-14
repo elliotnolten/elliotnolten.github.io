@@ -70,7 +70,7 @@ h1 {
     padding: 0;
   }
   h1.h-boxed--xxl {
-    padding: 1.5em;
+    margin: 1em;
   }
   .box {
     border-radius: 0;
