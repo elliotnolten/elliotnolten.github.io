@@ -65,9 +65,12 @@ h1 {
     width: 100%;
   }
 }
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 320px) {
   #content_wrapper {
     padding: 0;
+  }
+  h1.h-boxed--xxl {
+    padding: 1.5em;
   }
   .box {
     border-radius: 0;
