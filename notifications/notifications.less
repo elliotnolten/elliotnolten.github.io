@@ -22,41 +22,50 @@ h1 {
     color:#696762;
     line-height:1;
   }
- .header {
-  background:#dbdad7;
-  color:#696762;
- }
- .lists {
-  background:#FFF;
-  a {
-    display:block;
-    color:#000;
-    &:hover {
-      background:#e5ebf7;
-      color:#36c;
-    }
-  }
- }
- .done {
-  display:none;
- }
- &.added {
-  .sb-favorite {
-    color:#d12c2a;
-    -webkit-transition-property:color;
-    -webkit-transition-delay:250ms;
-    -webkit-transition-duration:500ms;
-    -webkit-transition-timing:ease-in-out;
-    -webkit-animation:pulse 500ms ease-in-out;
-    -webkit-animation-delay:250ms;
+  .header {
+    background:#dbdad7;
+    color:#696762;
   }
   .lists {
-    display:none;
+    background:#FFF;
+    a {
+      display:block;
+      color:#000;
+      &:hover {
+        background:#e5ebf7;
+        color:#36c;
+      }
+    }
   }
   .done {
-    display:block;
+    display:none;
   }
- }
+  &.added {
+    .sb-favorite {
+      color:#d12c2a;
+      -webkit-transition-property:color;
+      -webkit-transition-delay:250ms;
+      -webkit-transition-duration:500ms;
+      -webkit-transition-timing:ease-in-out;
+      -webkit-animation:pulse 500ms ease-in-out;
+      -webkit-animation-delay:250ms;
+    }//.sb-favorite
+    .lists {
+      display:none;
+    }//.lists
+    .done {
+      display:block;
+    }//.done
+  }//&.added
+
+  input {
+    border:none;
+    outline:none;
+    display:block;
+    &:hover, &:focus {
+      background:#e5ebf7;
+    }
+  }//input
 }
 
 @media only screen and (max-width:600px) {

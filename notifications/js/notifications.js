@@ -5,7 +5,8 @@
       headerOriginTxt = headerSpan.text(),
       addedTxt = '"Dying Light" is toegevoegd aan ',
       listOption = modalEl.find('.lists').find('a'),
-      stopEl = modalEl.find('.stop');
+      stopEl = modalEl.find('.stop'),
+      newListInput = modalEl.find('.new_list');
 
   listOption.click(function(e){
     e.preventDefault();

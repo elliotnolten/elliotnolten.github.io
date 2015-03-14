@@ -60,6 +60,16 @@ h1 {
 .modal.added .done {
   display: block;
 }
+.modal input {
+  border: none;
+  outline: none;
+  display: block;
+  width: 100%;
+}
+.modal input:hover,
+.modal input:focus {
+  background: #e5ebf7;
+}
 @media only screen and (max-width: 600px) {
   .one-half {
     width: 100%;
