@@ -4,9 +4,10 @@
       headerSpan = headerEl.find('.txt'),
       headerOriginTxt = headerSpan.text(),
       addedTxt = '"Dying Light" is toegevoegd aan ',
-      listOption = modalEl.find('.lists').find('a'),
+      listOption = modalEl.find('.lists').find('a:not(.new_list)'),
       stopEl = modalEl.find('.stop'),
-      newListInput = modalEl.find('.new_list');
+      newList = modalEl.find('.new_list'),
+      newListInput = newList.find('input');
 
   listOption.click(function(e){
     e.preventDefault();
@@ -20,6 +21,15 @@
     e.preventDefault();
     modalEl.removeClass('added');
     headerSpan.text(headerOriginTxt);
+  });
+
+  newListInput.on('keypress',function(e){
+    if ($(this).val()) {
+      $(this).parent().after('<a href="#" class="submit sb sb-check h-padding--s"></a>');
+    } else {
+      $('.submit').remove();
+    }
+    $(this).parent().parent().addClass('option');
   });
 
 })(jQuery);

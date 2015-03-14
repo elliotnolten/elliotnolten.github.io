@@ -60,15 +60,29 @@ h1 {
 .modal.added .done {
   display: block;
 }
-.modal input {
+.modal .new_list {
+  position: relative;
+}
+.modal .new_list:hover,
+.modal .new_list:hover input {
+  background: #e5ebf7;
+  color: #36c;
+}
+.modal .new_list input {
   border: none;
   outline: none;
-  display: block;
-  width: 100%;
+  width: 75%;
 }
-.modal input:hover,
-.modal input:focus {
-  background: #e5ebf7;
+.modal .new_list input:before {
+  content: "\e60a";
+}
+.modal .new_list input:-webkit-input-placeholder {
+  color: red;
+}
+.modal .new_list .sb-check {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 @media only screen and (max-width: 600px) {
   .one-half {
