@@ -29,7 +29,6 @@ em {
 
 #splash {
 	width: 100%;
-	max-width:1280px;
 	height: 1280px;
 	margin: 0 auto;
 	position: absolute;
@@ -39,8 +38,9 @@ em {
 #splash img {
 	display: block;
 	width: 100%;
+	max-width:1280px;
 	height: auto;
-	margin: -50% auto;
+	margin: -35% auto 0 auto;
 }
 
 #hero {
@@ -78,7 +78,7 @@ ul, li {
 #product-list ul li {
 	margin: 0 0 20px 0;
 	padding: 40px;
-	background: "white";
+	background: rgba(255,255,255,0.8);
 	border-radius: 8px;
 	box-shadow: 0 4px 16px rgba(0,0,0,0.15);
 	position: relative;
