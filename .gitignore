@@ -1,3 +1,5 @@
 
 *.codekit
 node_modules
+.cache
+.sass*
