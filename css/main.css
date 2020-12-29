@@ -280,6 +280,10 @@ p {
 a {
   color: #06f;
 }
+a:hover {
+  text-decoration: underline;
+  color: #06f;
+}
 button {
   background-color: #06f;
   color: white;
