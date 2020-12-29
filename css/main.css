@@ -274,8 +274,8 @@ h3 {
 }
 p {
   font-size: 1rem;
-  line-height: 36px;
-  margin-bottom: 1rem;
+  line-height: 2rem;
+  margin: 0;
 }
 a {
   color: #06f;

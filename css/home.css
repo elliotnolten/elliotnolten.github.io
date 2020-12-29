@@ -4,14 +4,15 @@ html {
   height: 100%;
   margin: 0;
   padding: 0;
-  font-family: "IBM Plex Mono", monospace;
+  font-family: Raleway, sans-serif;
   font-size: 20px;
-  line-height: 1.8rem;
+  line-height: 1.6rem;
+  letter-spacing: 0.03em;
   color: #222;
 }
 
 main {
-  max-width: 924px;
+  max-width: 480px;
   margin: 0 auto;
 }
 
@@ -24,9 +25,10 @@ header {
 }
 
 header section {
-  width: 100%;
+  width: auto;
   max-width: 924px;
   margin: 24px auto;
+  padding: 0 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -49,8 +51,6 @@ header ul > li {
   display: block;
   width: 44px;
   height: 44px;
-  text-indent: -99999px;
-  background-color: #ccc;
   position: relative;
 }
 
@@ -58,12 +58,15 @@ header ul > li > a {
   display: block;
   width: 24px;
   height: 24px;
-  background-color: #222;
   margin: 10px;
 }
 
+header ul > li > a > img {
+  display: block;
+}
+
 #intro {
-  margin: 72px 24px;
+  margin: 104px 24px 72px 24px;
   display: grid;
   grid-template-columns: 96px 1fr;
   grid-template-rows: 96px 1fr;
@@ -76,8 +79,8 @@ header ul > li > a {
 }
 
 h1 {
-  font-size: 1rem;
-  line-height: 2rem;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
   width: 100%;
 }
 .avatar img {
@@ -89,7 +92,7 @@ h1 {
   margin: 96px 24px;
 }
 
-#work .cases {
+.cases {
   width: auto;
   list-style: none;
   display: grid;
@@ -99,14 +102,59 @@ h1 {
   grid-row-gap: 24px;
 }
 
-#work .cases > .case {
+.cases .case {
   background-color: #ccc;
   border-radius: 16px;
   width: 100%;
   height: 160px;
+  overflow: hidden;
+  position: relative;
+}
+
+.cases a.case-content {
+  display: block;
+  padding: 24px;
+  color: #333;
+  text-decoration: none;
+  width: calc(100% - 48px);
+  height: calc(100% - 48px);
+  overflow: hidden;
+}
+
+.cases > div > a:hover {
+  text-decoration: underline;
+}
+
+.cases .case-a {
+  background-color: #e6f2f7;
+}
+
+.cases .case-b {
+  background-color: #fdcc2e;
+}
+
+.cases .case-c {
+  background: url("../img/suitsupply.gif") no-repeat center center;
+  background-size: cover;
+}
+
+.cases .case-c > a.case-content {
+  color: white;
+}
+
+.cases #lottie {
+  position: absolute;
+  right: -156px;
+  top: 0;
 }
 
 @media only screen and (min-width: 640px) {
+  header section {
+    padding: 0 48px;
+  }
+  main {
+    max-width: 640px;
+  }
   #intro {
     margin: 144px 48px;
     grid-template-columns: 160px 1fr;
@@ -121,7 +169,7 @@ h1 {
     grid-column-gap: 40px;
   }
   h1 {
-    font-size: 2rem;
+    font-size: 2.8rem;
     line-height: 3.6rem;
   }
   .avatar img {
@@ -138,9 +186,15 @@ h1 {
   .case-a {
     grid-column: span 2;
   }
+  .cases #lottie {
+    right: -80px;
+  }
 }
 
 @media only screen and (min-width: 1020px) {
+  main {
+    max-width: 924px;
+  }
   #intro {
     grid-row-gap: 24px;
     grid-template-rows: 72px 1fr;
@@ -154,5 +208,8 @@ h1 {
   }
   #intro .text {
     grid-column: span 1;
+  }
+  .cases #lottie {
+    right: 0px;
   }
 }

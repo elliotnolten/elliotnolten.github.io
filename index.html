@@ -17,10 +17,8 @@
     <!-- Place favicon.ico in the root directory -->
 
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;800&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/home.css" />
@@ -33,9 +31,15 @@
       <section>
         <a href="https://nolten.co">Elliot Nolten</a>
         <ul class="social-links">
-          <li><a href="#">Dribbble</a></li>
-          <li><a href="#">Linkedin</a></li>
-          <li><a href="#">Twitter</a></li>
+          <li>
+            <a href="https://dribbble.com/elliotnolten" target="_blank"><img src="img/dribbble.svg" /></a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/elliotnolten/" target="_blank"><img src="img/linkedin.svg" /></a>
+          </li>
+          <li>
+            <a href="https://twitter.com/elliotnolten" target="_blank"><img src="img/twitter.svg" /></a>
+          </li>
         </ul>
       </section>
     </header>
@@ -53,15 +57,29 @@
         </div>
       </div>
       <div id="work">
-        <h2>Some work:</h2>
+        <h2>Some work</h2>
         <div class="cases">
-          <div class="case case-a"></div>
-          <div class="case case-b"></div>
-          <div class="case case-c"></div>
+          <div class="case case-a" id="tile">
+            <a href="#" target="_blank" class="case-content">
+              <p>funda</p>
+              <p><strong>Push Notifications</strong></p>
+              <div id="lottie">
+                <lottie-player
+                  mode="bounce"
+                  src="https://assets3.lottiefiles.com/packages/lf20_i50z148k.json"
+                  style="width: 480px"
+                >
+                </lottie-player>
+              </div>
+            </a>
+          </div>
+          <div class="case case-b"><a href="#" class="case-content"></a href="#"></div>
+          <div class="case case-c"><a href="#" class="case-content"><p>Suitsupply</p><p><strong>In-store screens</strong></p></a></div>
         </div>
       </div>
     </main>
     <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@0.4.0/dist/tgs-player.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
   </body>
