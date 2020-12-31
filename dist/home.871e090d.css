@@ -112,6 +112,10 @@ h1 {
   position: relative;
 }
 
+.cases .case p {
+  line-height: 1.6rem;
+}
+
 .cases a.case-content {
   display: block;
   padding: 24px;
